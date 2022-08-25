@@ -6,6 +6,12 @@ public class Produto {
     private String nomeMarca;
     private int qtd;
 
+    public Produto(String nomeProduto, String nomeMarca, int qtd){
+        this.nomeProduto = nomeProduto;
+        this.nomeMarca = nomeMarca;
+        this.qtd = qtd;
+    }
+
     public String getNomeMarca() {
         return nomeMarca;
     }
@@ -28,5 +34,10 @@ public class Produto {
 
     public void setQtd(int qtd) {
         this.qtd = qtd;
+    }
+
+    @Override
+    public String toString() {
+        return nomeProduto + " - " + nomeMarca + " - "  + qtd;
     }
 }
